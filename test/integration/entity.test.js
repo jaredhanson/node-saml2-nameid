@@ -27,7 +27,6 @@ describe('issuer with default format of entity identifier', function() {
     
     it('should parse correctly', function() {
       var id = nameid.parse(xml, 'urn:oasis:names:tc:SAML:2.0:nameid-format:entity');
-      console.log(id.formatURI)
     
       expect(id).to.be.an('object');
       expect(Object.keys(id)).to.have.length(4);
@@ -43,7 +42,6 @@ describe('issuer with default format of entity identifier', function() {
     
     it('should parse correctly', function() {
       var id = nameid.parse(xml, 'urn:oasis:names:tc:SAML:2.0:nameid-format:entity');
-      console.log(id.formatURI)
     
       expect(id).to.be.an('object');
       expect(Object.keys(id)).to.have.length(4);
