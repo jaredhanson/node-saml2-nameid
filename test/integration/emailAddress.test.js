@@ -1,6 +1,6 @@
 var nameid = require('index');
 
-describe('name identifier in transient format', function() {
+describe('name identifier in email address format', function() {
   
   describe('with value', function() {
     var xml = '<saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">user@mail.example.org</saml:NameID>';
