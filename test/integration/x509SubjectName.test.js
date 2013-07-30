@@ -1,4 +1,4 @@
-var nameid = require('index');
+var nameid = require('../..');
 
 describe('name identifier in X.509 subject name format', function() {
   

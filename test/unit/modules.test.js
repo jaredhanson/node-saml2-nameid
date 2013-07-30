@@ -1,4 +1,4 @@
-var nameid = require('index');
+var nameid = require('../..');
 
 describe('saml2-nameid', function() {
   

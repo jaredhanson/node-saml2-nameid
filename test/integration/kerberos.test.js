@@ -1,4 +1,4 @@
-var nameid = require('index');
+var nameid = require('../..');
 
 describe('name identifier in Kerberos principal name format', function() {
   

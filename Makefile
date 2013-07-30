@@ -3,7 +3,6 @@ include support/mk/browserify.mk
 include support/mk/mocha.mk
 
 TESTS = test/*.test.js test/**/*.test.js
-NODE_PATH_TEST = ./lib
 
 BROWSERIFY_MAIN = ./lib/index.js
 
