@@ -1,16 +1,32 @@
+SOURCES = lib/*.js lib/*/**.js
+TESTS = test/*.test.js test/**/*.test.js
+
+test: test-mocha
+lint: lint-jshint
+
+
+# ==============================================================================
+# Node.js
+# ==============================================================================
 include support/mk/node.mk
 include support/mk/mocha.mk
+
+# ==============================================================================
+# Browserify
+# ==============================================================================
+BROWSERIFY_MAIN = ./lib/index.js
 
 include support/mk/browserify.mk
 include support/mk/testling.mk
 
-TESTS = test/*.test.js test/**/*.test.js
+# ==============================================================================
+# Code Quality
+# ==============================================================================
+include support/mk/jshint.mk
 
-BROWSERIFY_MAIN = ./lib/index.js
-
-test: test-mocha
-
-
+# ==============================================================================
+# Clean
+# ==============================================================================
 clean:
 	rm -rf build
 
