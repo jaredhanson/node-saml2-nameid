@@ -40,9 +40,9 @@
     "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
   },
   "testling": {
-    "browsers": {
-      "chrome": [ "25.0" ]
-    },
+    "browsers": [
+      "chrome/latest"
+    ],
     "harness" : "mocha",
     "files": [
       "test/bootstrap/testling.js",
