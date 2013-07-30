@@ -1,6 +1,8 @@
 include support/mk/node.mk
-include support/mk/browserify.mk
 include support/mk/mocha.mk
+
+include support/mk/browserify.mk
+include support/mk/testling.mk
 
 TESTS = test/*.test.js test/**/*.test.js
 
