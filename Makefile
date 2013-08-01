@@ -26,6 +26,7 @@ include support/mk/testling.mk
 # ==============================================================================
 include support/mk/notes.mk
 include support/mk/jshint.mk
+include support/mk/istanbul.mk
 
 # ==============================================================================
 # Continuous Integration
