@@ -1,8 +1,10 @@
 SOURCES = lib/*.js lib/*/**.js
 TESTS = test/*.test.js test/**/*.test.js
 
-test: test-mocha
 lint: lint-jshint
+test: test-mocha
+test-cov: test-istanbul-mocha
+view-cov: view-istanbul-report
 
 
 # ==============================================================================
@@ -26,10 +28,19 @@ include support/mk/notes.mk
 include support/mk/jshint.mk
 
 # ==============================================================================
+# Continuous Integration
+# ==============================================================================
+include support/mk/coveralls.mk
+
+ci-travis: test test-cov
+submit-coverage-to-coveralls: submit-istanbul-lcov-to-coveralls
+
+# ==============================================================================
 # Clean
 # ==============================================================================
 clean:
 	rm -rf build
+	rm -rf reports
 
 clobber: clean clobber-node
 
